@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Project Name</title>
+	<meta name="author" content="The Author"></meta>
+</h:head>
+<!-- Add 50px padding top to the body for the navbar -->
+<h:body>
+
+	<ui:composition template="/template/layout.xhtml">
+
+		<ui:define name="content">
+			<b:jumbotron>
+				<b:container>
+					<h1>Bienvenue sur le site des adorateurs de Tarik. Veuillez
+						vous connecter ou vous inscrire</h1>
+					<p>En fait vous ne pouvez que vous incrire pour le moment ....</p>
+				</b:container>
+
+	<h:form>
+						<h:commandButton value="ma photo" action="formulaire2.xhtml" styleClass="richButton"/>
+	
+
+	</h:form>
+
+			</b:jumbotron>
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>

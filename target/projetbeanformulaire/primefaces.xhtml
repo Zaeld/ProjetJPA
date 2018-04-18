@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:p="http://primefaces.org/ui">
+		<h:head>
+  <title>Bienvenue</title>
+<h:outputStylesheet library= "CSS" name= "style.css" target= "body"/>
+<h:outputStylesheet library= "CSS" name= "bootstrap.min.css" target= "body"/>
+  
+<h:outputScript library= "javascript" name= "bootstrap.min.js" target= "head"/>
+<h:outputScript library= "javascript" name= "jquery.js" target= "head"/>
+
+</h:head>
+<h:body>
+<h:form>           
+    <p:growl id="message" showDetail="true" />
+ 
+    <p:commandButton value="Destroy the World" actionListener="#{dialogView.destroyWorld}" update="message">
+        <p:confirm header="Confirmation" message="Are you sure?" icon="ui-icon-alert" />
+    </p:commandButton>
+ 
+    <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+        <p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+        <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+    </p:confirmDialog>
+</h:form>
+
+<h:form>
+    <p:growl id="msgs" showDetail="true"/>
+ 
+    <h:panelGrid columns="2">
+        <p:imageCropper value="#{cropperView.croppedImage}" image="/resources/image/a.jpg" initialCoords="225,75,300,125"/>
+        <h:panelGroup id="cropped">
+            <p:graphicImage rendered="#{not empty cropperView.newImageName}" name="demo/images/crop/#{cropperView.newImageName}.jpg" />
+        </h:panelGroup>
+    </h:panelGrid>
+ 
+    <p:commandButton value="Crop" action="#{cropperView.crop}" update="cropped msgs" icon="ui-icon-scissors"/>
+</h:form>
+
+</h:body>
+</html>

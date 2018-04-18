@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+<h:head>
+	<title>Bienvenue</title>
+	<h:outputStylesheet library="CSS" name="style.css" target="body" />
+	<h:outputStylesheet library="CSS" name="bootstrap.min.css"
+		target="body" />
+
+	<h:outputScript library="javascript" name="bootstrap.min.js"
+		target="head" />
+	<h:outputScript library="javascript" name="jquery.js" target="head" />
+
+</h:head>
+<body>
+<ui:composition template="/template/layout.xhtml">
+</ui:composition>
+
+	<h1 class="display-3">Bienvenue sur le site des adorateurs de
+		Tarik. Veuillez vous connecter ou vous inscrire</h1>
+	<p>En fait vous ne pouvez que vous incrire pour le moment ....</p>
+
+	<h:form>
+
+		<h:commandLink value="S'inscrire" action="formulaire2.xhtml" />
+		<h:commandLink value="Primefaces" action="primefaces.xhtml" />
+
+	</h:form>
+
+
+
+</body>
+</html>

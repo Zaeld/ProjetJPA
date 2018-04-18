@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:h="http://java.sun.com/jsf/html">
+<head>
+  <title>Bienvenue</title>
+ 
+</head>
+<body>
+
+		<h:form>
+			<h4>
+				Formulaire d'inscription.
+			</h4>
+		
+			<table>	
+				<tr>
+					<td>Email:</td>
+					<td><h:inputText value="#{utilisateur.email}" required="true"
+							id="email" /> <h:message for="email" /></td>
+				</tr>
+				<tr>
+					<td>Login:</td>
+					<td><h:inputText value="#{utilisateur.identifiant}" required="true"
+							id="identifiant" /> <h:message for="identifiant" /></td>
+				</tr>
+				<tr>
+					<td>Mot de passe:</td>
+					<td><h:inputText value="#{utilisateur.motDePasse}" required="true"
+							id="motDePasse" /> <h:message for="motDePasse" /></td>
+				</tr>
+			<tr>
+					<td>Nom:</td>
+					<td><h:inputText value="#{utilisateur.nom}" required="true"
+							id="nom" /> <h:message for="nom" /></td>
+				</tr>
+				<tr>
+					<td>Prénom:</td>
+					<td><h:inputText value="#{utilisateur.prenom}" required="true"
+							id="prenom" /> <h:message for="prenom" /></td>
+				</tr>
+				<tr>
+					<td>Adresse:</td>
+					<td><h:inputText value="#{utilisateur.adresse}" required="true"
+							id="adresse" /> <h:message for="adresse" /></td>
+				</tr>
+			</table>
+			<p>
+				<h:commandButton value="Inscription" action="#" />
+			</p>
+		</h:form>
+	</body>
+</html>
